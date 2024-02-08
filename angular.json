@@ -30,7 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/app/shared/scss/global-styles.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
