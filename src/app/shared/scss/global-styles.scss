@@ -1,3 +1,5 @@
-main {
-    background-color: #33b3a6;
+@import "./variables.scss";
+
+p {
+    color: $font-color-white;
 }
