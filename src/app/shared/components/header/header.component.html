@@ -1,1 +1,11 @@
-<p>header works!</p>
+<div class="header-component">
+    <h1 class="header-name">
+        Lokesh Paduchuri
+    </h1>
+    <div class="header-links">
+        <div *ngFor="let item of pages">
+            {{item.name}}
+        </div>
+    </div>
+</div>
+

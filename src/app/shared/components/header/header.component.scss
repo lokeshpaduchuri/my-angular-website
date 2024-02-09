@@ -1,6 +1,39 @@
 @import '../../scss/variables.scss';
 @import '../../scss/global-styles.scss';
 
-p {
-    color: $font-color-brown-warm;
+.header-component {
+    display: flex;
+    align-items: center;
+    width: auto;
+    justify-content: space-between;
+    background-color: rgba($color: $font-color-lavender, $alpha: 0.2);
+    padding: 20px;
+    border-bottom: 1px solid rgba($color: $font-color-lavender, $alpha: 0.6);
+}
+
+.header-name {
+    color: $font-color-beige;
+    font-family: $font-family-guerrilla;
+    margin: 0;
+}
+
+.header-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    div {
+        color: $font-color-beige;
+        // font-family: $font-family-pacifico;
+        font-family: $font-family-64;
+        font-size: 12px;
+        padding: 0 10px;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .header-links {
+        display: none;
+    }
 }
