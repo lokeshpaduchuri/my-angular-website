@@ -24,11 +24,14 @@
 
     div {
         color: $font-color-beige;
-        // font-family: $font-family-pacifico;
         font-family: $font-family-64;
         font-size: 12px;
         padding: 0 10px;
         bottom: 0;
+    }
+
+    .menu-selected {
+        color: $font-color-green-dark;
     }
 }
 

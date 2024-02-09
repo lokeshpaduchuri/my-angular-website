@@ -1,10 +1,14 @@
 <div class="header-component">
-    <h1 class="header-name">
+    <h1 class="header-name" [routerLink]="['/']" (click)="urlSelected('/')">
         Lokesh Paduchuri
     </h1>
     <div class="header-links">
         <div *ngFor="let item of pages">
-            {{item.name}}
+            <span routerLink="{{item.url}}" 
+                (click)="urlSelected(item.url)" 
+                [ngClass]="{'menu-selected': item.url === selectedUrl}">
+                {{item.name}}
+            </span>
         </div>
     </div>
 </div>
