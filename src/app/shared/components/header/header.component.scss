@@ -15,6 +15,7 @@
     color: $font-color-beige;
     font-family: $font-family-guerrilla;
     margin: 0;
+    cursor: pointer;
 }
 
 .header-links {
@@ -28,6 +29,7 @@
         font-size: 12px;
         padding: 0 10px;
         bottom: 0;
+        cursor: pointer;
     }
 
     .menu-selected {
