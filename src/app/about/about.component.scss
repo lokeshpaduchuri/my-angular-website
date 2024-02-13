@@ -1,0 +1,69 @@
+@import '../app.component.scss';
+
+.about-container {
+    height: 100vh;
+    background-color: rgba($font-color-gray,0.9);
+}
+
+.sections {
+    flex: 40%;
+    padding: 30px;
+    margin: 10px 20px;
+    background-color: rgba($font-color-brown-light,0.7);
+    border-radius: 20px;
+    height: 200px;
+}
+
+.section-heading {
+    padding-bottom: 5px;
+    font-family: $font-family-syne;
+    font-size: 1.5rem;
+}
+
+.section-subtext {
+    font-family: $font-family-titillium;
+    padding-bottom: 20px;
+}
+
+.section-icons {
+    display: flex;
+    flex-direction: row;
+
+    span {
+        padding-right: 10px;
+    }
+
+    img {
+        height: 45px;
+        width: 45px;
+    }
+}
+
+
+@media screen and (max-width: 650px) { 
+    .sections {
+        flex: 100%;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        height: auto;
+    }
+
+    .section-heading { 
+        font-size: 1rem;
+    }
+
+    .section-subtext {
+        font-size: 0.5rem;
+        padding-bottom: 10px;
+    }
+
+    .section-icons { 
+        img {
+            height: 25px;
+            width: 25px;
+        }
+    }
+    
+}

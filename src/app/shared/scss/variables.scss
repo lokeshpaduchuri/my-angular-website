@@ -24,3 +24,12 @@ $font-family-guerrilla: 'Protest Guerrilla', sans-serif;
 $font-family-protest: 'Protest Strike', sans-serif;
 $font-family-64: 'Sixtyfour', sans-serif;
 $font-family-syne: 'Syne Mono', monospace;
+$font-family-titillium: 'Titillium Web', sans-serif;
+$font-family-bahia: "Bahianita", sans-serif;
+$font-family-dancing: "Dancing Script", cursive;
+
+/* Keyframe animation for the typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}

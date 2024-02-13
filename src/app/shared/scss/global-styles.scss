@@ -3,3 +3,73 @@
 p {
     color: $font-color-white;
 }
+
+.parent-col-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100vh;
+
+    .col-left {
+        width: 30%;
+        margin: auto;
+    }
+
+    .col-right {
+        width: 70%;
+        font-family: $font-family-protest;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+}
+
+.image-holder {
+    width: 350px; /* Adjust the width and height based on your design */
+    height: 350px;
+    border-radius: 50%; /* Create a circular shape */
+    overflow: hidden; /* Hide any content that overflows the circular shape */
+    border: 2px solid #ccc; /* Optional: Add a border for styling */
+    margin: auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+    .parent-col-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .col-left {
+            width: auto;
+            margin: 20px;
+        }
+
+        .col-right {
+            width: auto;
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+            margin: 0 20px;
+        }
+    }
+
+    .image-holder {
+        width: 250px; /* Adjust the width and height based on your design */
+        height: 250px;
+        border-radius: 50%; /* Create a circular shape */
+        overflow: hidden; /* Hide any content that overflows the circular shape */
+        border: 2px solid #ccc; /* Optional: Add a border for styling */
+        margin: auto;
+    }
+}
