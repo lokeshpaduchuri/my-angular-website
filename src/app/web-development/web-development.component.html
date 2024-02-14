@@ -6,7 +6,7 @@
             </span>
         </ng-template>
         <ng-template pTemplate="content" let-event>
-            <p-card [header]="event.company" [subheader]="event.date">
+            <p-card [header]="event.company" [subheader]="event.date" [ngClass]="{'active-box': event.currentJob}">
                 <p>
                     {{event.details}}
                 </p>

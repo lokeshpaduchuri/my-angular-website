@@ -73,6 +73,18 @@ p {
     margin: 50px;
 }
 
+.p-card {
+    border: 2px solid rgba($font-color-black, 0.7);
+    box-shadow: 10px 5px 5px rgba($font-color-black, 0.3);
+}
+
+.active-box {
+    .p-card {
+        border: 3px solid rgba($font-color-green-dark, 1);
+        box-shadow: 10px 5px 5px rgba($font-color-green-dark, 0.8);
+    }
+}
+
 .grayscale { filter: grayscale(100%); }
 .p-timeline-event-separator {
     span {
