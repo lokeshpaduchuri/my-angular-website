@@ -42,6 +42,54 @@ p {
 }
 
 
+.technology-title {
+    color: $font-color-black;
+    font-family: $font-family-titillium;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.technology-pills {
+    border-radius: 12px;
+    background-color: $font-color-gray;
+    margin: 5px;
+    padding: 8px;
+    display: inline-block;
+    
+    .technology-name {
+        font-size: small;
+        vertical-align: middle;
+    }
+    img {
+        height: 24px;
+        width: 24px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+}
+
+//Prime NG styles
+.card {
+    margin: 50px;
+}
+
+.grayscale { filter: grayscale(100%); }
+.p-timeline-event-separator {
+    span {
+        background-color: none !important;
+    }
+
+}
+.p-card-content {
+    padding: 0.5rem 0;
+    p {
+        color: $font-color-black;
+        margin: 0;
+        font-family: $font-family-titillium;
+    }
+}
+
+
 
 
 @media screen and (max-width: 650px) {
@@ -71,5 +119,64 @@ p {
         overflow: hidden; /* Hide any content that overflows the circular shape */
         border: 2px solid #ccc; /* Optional: Add a border for styling */
         margin: auto;
+    }
+
+
+    // Timeline primeNG changes
+
+    .card {
+        margin: 10px;
+    }
+    .p-timeline-event {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .p-timeline-event-separator {
+        display: none;
+    }
+
+    .p-card-body {
+        padding: 1rem;
+    }
+    .p-card-title {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+
+    .p-card-subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+    }
+
+    .p-card-content {
+        padding: 0.2rem 0;
+        font-size: 0.8rem;
+    }
+
+    .technology-title {
+        color: $font-color-black;
+        font-family: $font-family-titillium;
+        margin: 5px 0;
+        font-size: 0.6rem;
+    }
+    .technology-pills {
+        border-radius: 12px;
+        background-color: $font-color-gray;
+        margin: 2px;
+        padding: 2px;
+        display: inline-block;
+        
+        .technology-name {
+            font-size: smaller;
+            vertical-align: middle;
+        }
+        img {
+            height: 12px;
+            width: 12px;
+            vertical-align: middle;
+            margin-right: 2px;
+        }
+    
     }
 }

@@ -1,1 +1,23 @@
-<p>web-development works!</p>
+<div class="card">
+    <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
+        <ng-template pTemplate="marker" let-event>
+            <span class="custom-marker shadow-2">
+                <img src="{{event.icon}}" [ngClass]="{'grayscale': !event.currentJob}">
+            </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-event>
+            <p-card [header]="event.company" [subheader]="event.date">
+                <p>
+                    {{event.details}}
+                </p>
+
+                <div class="technology-title">
+                    Technology Stack -
+                </div>
+                <div class="technology-pills" *ngFor="let item of event.stack">
+                    <span class="technology-name"><img class="technology-images" src="{{item.icon}}">{{item.name}}</span>
+                </div>
+            </p-card>
+        </ng-template>
+    </p-timeline>
+</div>

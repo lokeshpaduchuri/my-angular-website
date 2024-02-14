@@ -12,7 +12,7 @@
 }
 
 .header-name {
-    color: $font-color-beige;
+    color: $font-color-white;
     font-family: $font-family-guerrilla;
     margin: 0;
     cursor: pointer;
@@ -24,7 +24,7 @@
     justify-content: flex-end;
 
     div {
-        color: $font-color-beige;
+        color: $font-color-gray;
         font-family: $font-family-64;
         font-size: 12px;
         padding: 0 10px;
