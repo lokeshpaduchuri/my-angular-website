@@ -2,17 +2,17 @@
 
 .about-container {
     height: 100vh;
-    background-color: rgba($font-color-gray,0.9);
+    background-color: rgba($color-gray,0.9);
 }
 
 .sections {
     flex: 40%;
     padding: 30px;
     margin: 10px 20px;
-    background-color: rgba($font-color-brown-light,0.7);
+    background-color: rgba($color-green-light,0.7);
     border-radius: 20px;
     height: auto;
-    box-shadow: 10px 5px 5px rgba($font-color-brown-warm, 0.5);
+    box-shadow: 10px 5px 5px rgba($color-green-dark, 0.5);
     animation: fadeIn 1s ease-in-out forwards;
 }
 
@@ -20,7 +20,7 @@
     padding-bottom: 5px;
     font-family: $font-family-syne;
     font-size: 1.5rem;
-    text-shadow: 5px 5px $font-color-brown-dark;
+    text-shadow: 5px 5px $color-green-pale;
 }
 
 .section-subtext {

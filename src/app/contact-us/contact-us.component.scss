@@ -1,0 +1,46 @@
+@import '../app.component.scss';
+
+.contact-container {
+    height: 100vh;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin: 20px auto;
+    color: $color-brown-warm;
+
+    mat-form-field {
+        width: 100%; 
+    }
+
+}
+
+mat-label {
+    font-family: $font-family-protest;
+    color: $color-charcol;
+}
+
+.mat-mdc-form-field-infix {
+    display: none;
+}
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: $color-gray !important;
+   }
+
+::ng-deep .mat-mdc-form-field {
+
+    font-family: $font-family-protest !important;
+    color: $color-gray !important;
+    
+    .mdc-text-field--filled {
+        background-color: $color-gray !important;
+    }
+
+}
+
+
+

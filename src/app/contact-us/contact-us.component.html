@@ -1,1 +1,36 @@
-<p>contact-us works!</p>
+<div class="contact-container">
+    <div class="page-header">
+        <div class="header-title">
+            Reach Out and Virtual High-Five!
+        </div>
+        <div class="header-subtitle">
+            Dive into the magic of our inbox – where your messages can turn into digital wonders.
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+            <mat-form-field> 
+                <mat-label>First Name</mat-label>
+                <input matInput id="firstName" formControlName="firstName" placeholder=" ">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Last Name</mat-label>
+                <input matInput id="lastName" formControlName="lastName" placeholder=" ">
+            </mat-form-field>
+            
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput id="email" formControlName="email" placeholder=" ">
+            </mat-form-field>
+            
+            <mat-form-field>
+                <mat-label>Message</mat-label>
+                <textarea matInput id="message" formControlName="message" placeholder=" "></textarea>
+            </mat-form-field>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
