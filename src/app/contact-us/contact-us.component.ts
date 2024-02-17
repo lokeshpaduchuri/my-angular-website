@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormControl, AbstractControl } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input'; 
 import {MatButtonModule} from '@angular/material/button';
+import { MailerService } from '../shared/services/mailer.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -24,7 +25,7 @@ export class ContactUsComponent {
   emailValidationError = "Oh snap! Your email is tap dancing on the wrong keys. Time for a graceful redirect!";
   messageError = "Message in a bottle? Your words are taking a sea adventure. Bring them back to shore!";
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private mailerService: MailerService) {
     
   }
 
@@ -43,6 +44,16 @@ export class ContactUsComponent {
     if (this.myForm.valid) {
       // Process the form data here (e.g., send it to a server)
       console.log('Form submitted:', this.myForm.value);
+      // this.mailerService.sendMail(this.myForm.value.firstName +' '+this.myForm.value.lastName, this.myForm.value.email, this.myForm.value.message)
+      //   .then(() => {
+      //     console.log('Email sent successfully');
+      //     // Optionally, reset the form or show a success message
+      //     this.myForm.reset();
+      //   })
+      //   .catch(error => {
+      //     console.error('Error sending email:', error);
+      //     // Optionally, show an error message
+      //   });
     } else {
       // Handle form validation errors
       console.error('Form is invalid. Please check the fields.');
