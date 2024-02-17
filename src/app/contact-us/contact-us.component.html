@@ -13,24 +13,45 @@
             <mat-form-field> 
                 <mat-label>First Name</mat-label>
                 <input matInput id="firstName" formControlName="firstName" placeholder=" ">
+                @if (f['firstName'].errors) {
+                    <mat-error>{{firstNameError}}</mat-error>
+                }
             </mat-form-field>
 
             <mat-form-field>
                 <mat-label>Last Name</mat-label>
                 <input matInput id="lastName" formControlName="lastName" placeholder=" ">
+                @if (f['lastName'].errors) {
+                    <mat-error>{{lastNameError}}</mat-error>
+                }
             </mat-form-field>
             
             <mat-form-field>
                 <mat-label>Email</mat-label>
                 <input matInput id="email" formControlName="email" placeholder=" ">
+                <!-- @if (f['email'].errors) {
+                    @if (f['email'].errors['required']) {
+                        <mat-error>{{emailError}}</mat-error>
+                    }
+                    @if (f['email'].errors['email']) { 
+                        <mat-error>{{emailValidationError}}</mat-error>
+                    }
+                    
+                } -->
+                <mat-error>{{getErrorMessage(f['email'])}}</mat-error>
             </mat-form-field>
             
             <mat-form-field>
                 <mat-label>Message</mat-label>
                 <textarea matInput id="message" formControlName="message" placeholder=" "></textarea>
+                @if (f['message'].errors) {
+                    <mat-error>{{messageError}}</mat-error>
+                }
             </mat-form-field>
+            <div class="button-container">
+                <button mat-raised-button type="submit">Hit Us With Wit!</button>
+            </div>
             
-            <button type="submit">Submit</button>
         </form>
     </div>
 </div>

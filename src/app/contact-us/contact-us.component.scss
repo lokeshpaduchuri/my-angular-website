@@ -4,6 +4,10 @@
     height: 100vh;
 }
 
+.button-container {
+    text-align: end;
+}
+
 .form-container {
     display: flex;
     flex-direction: column;
@@ -14,6 +18,11 @@
 
     mat-form-field {
         width: 100%; 
+        margin-bottom: 20px;
+    }
+
+    mat-error {
+        margin-bottom: 10px;
     }
 
 }
@@ -41,6 +50,17 @@ mat-label {
     }
 
 }
+
+@media screen and (max-width: 650px) { 
+    .form-container { 
+        width: 70%;
+    }
+
+    .button-container {
+        text-align: center;
+    }
+}
+
 
 
 
