@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-myangularwebsite-dev-00315-authRole",
+      "UnauthRoleArn": "arn:aws:iam::888794796276:role/amplify-myangularwebsite-dev-00315-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::888794796276:role/amplify-myangularwebsite-dev-00315-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-myangularwebsite-dev-00315-deployment",
+      "UnauthRoleName": "amplify-myangularwebsite-dev-00315-unauthRole",
+      "StackName": "amplify-myangularwebsite-dev-00315",
+      "StackId": "arn:aws:cloudformation:us-east-1:888794796276:stack/amplify-myangularwebsite-dev-00315/dc583f40-cd51-11ee-a11a-0e963b012345",
+      "AmplifyAppId": "d1t95irw928mq3"
+    },
+    "categories": {
+      "auth": {
+        "myangularwebsite44d3730a": {}
+      },
+      "storage": {
+        "angularPhotos1": {}
+      }
+    }
+  }
+}

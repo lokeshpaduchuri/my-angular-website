@@ -136,7 +136,11 @@ p {
     }
 }
 
-
+.center-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 // Animation all over the app
 
 @keyframes fadeIn {
