@@ -19,16 +19,16 @@ export const routes: Routes = [
     {
         path: 'photography',
         component: PhotographyComponent,
-        title: 'Home page',
+        title: 'Photography page',
     },
     {
         path: 'contact-me',
         component: ContactUsComponent,
-        title: 'About page',
+        title: 'Contact Me page',
     },
     {
         path: 'developer',
         component: WebDevelopmentComponent,
-        title: 'About page',
+        title: 'Web Development page',
     }
 ];

@@ -5,3 +5,28 @@ p {
     color: $color-gold;
     font-family: $font-family-syne;
 }
+
+.hero-container {
+    margin: 50px;
+}
+
+::ng-deep {
+
+    .p-carousel {
+        width: 1080px;
+        margin: 0 auto;
+    }
+    .p-carousel-container {
+        button {
+            display: none;
+        }
+    }
+
+    .p-carousel-item {
+        img{
+            height: 500px;
+            width: 1080px;
+            object-fit: contain;
+        }
+    }
+}

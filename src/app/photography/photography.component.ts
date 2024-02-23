@@ -37,7 +37,7 @@ constructor(private photoService : AmplifyPhotoService) { }
 async ngOnInit(){ 
   this.photoService.getS3Files().then(() => {
     this.loaded = true;
-    this.portraitImages = this.photoService.getImagesByType('portraits');
+    this.portraitImages = this.photoService.getImagesByType('all');
     console.log(this.portraitImages);
   });
   

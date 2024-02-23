@@ -12,6 +12,7 @@ export class AmplifyPhotoService {
   private familyImages: any[] = [];
   private landscapeImages: any[] =[];
   private productImages: any[] = [];
+  private heroImages: any[] = [];
 
    async getS3Files() {
     // Get all available folders and files in s3 bucket
@@ -40,14 +41,17 @@ export class AmplifyPhotoService {
         if(listItem.key.includes('products') && listItem.key.includes('jpg') && !listItem.key.includes('thumbnail')) {
           this.productImages.push({key: listItem.key});
         }
+
+        if(listItem.key.includes('homepage') && listItem.key.includes('jpg') && !listItem.key.includes('thumbnail')) {
+          this.heroImages.push({key: listItem.key});
+        }
       });
 
       this.sortCategoryImages(this.productImages);
       this.sortCategoryImages(this.portraitImages);
-      // this.sortCategoryImages(this.landscapeImages);
-      // this.sortCategoryImages(this.productImages);
-
-      console.log(this.familyImages);
+      this.sortCategoryImages(this.familyImages);
+      this.sortCategoryImages(this.landscapeImages);
+      this.sortCategoryImages(this.heroImages);
     } catch (error) {
     }
 
@@ -71,7 +75,8 @@ export class AmplifyPhotoService {
         key: img.key,
       });
 
-      img.metadata = imgProps.metadata;
+      // Get imageType from s3 object metadata
+      img.imageType = imgProps.metadata ? imgProps.metadata['imagetype']: '';
 
       //Set thumbnail image url
       let thumbnailKey = img.key.replace('.jpg','')+'-thumbnail.jpg';
@@ -88,8 +93,10 @@ export class AmplifyPhotoService {
   }
 
   getImagesByType (type: any) {
-    if( type === 'portraits') {
-      return [...this.productImages, ...this.portraitImages];
+    if( type === 'all') {
+      return [...this.productImages, ...this.portraitImages, ...this.familyImages, ...this.landscapeImages];
+    } else if (type === 'hero') {
+      return this.heroImages;
     } else {
       return false;
     }
