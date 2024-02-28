@@ -35,11 +35,15 @@ export class PhotographyComponent {
   
 constructor(private photoService : AmplifyPhotoService) { }
 async ngOnInit(){ 
-  this.photoService.getS3Files().then(() => {
+
+  if(!this.photoService.loadedImageData) {
+    this.photoService.getS3Files().then(() => {
+      this.loaded = true;
+      this.portraitImages = this.photoService.getImagesByType('all');
+    });
+  } else {
     this.loaded = true;
     this.portraitImages = this.photoService.getImagesByType('all');
-    console.log(this.portraitImages);
-  });
-  
+  }
 }
 }

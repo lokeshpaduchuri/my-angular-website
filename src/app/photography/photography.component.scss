@@ -13,6 +13,22 @@
     }
 }
 
-::ng-deep .p-galleria-thumbnail-wrapper {
-    // width: 600px !important;
+@media screen and (max-width: 650px) { 
+    ::ng-deep { 
+
+        .p-galleria-item-container {
+            img {
+                height: 50vh;
+                width: 80vw !important;
+                object-fit: cover;
+            }
+        }
+        .p-galleria-thumbnail-wrapper { 
+            width: 80vw;
+        }
+        .p-galleria-thumbnail-item {
+            flex: 1 0 100px !important;
+            visibility: visible;
+        }
+    }
 }

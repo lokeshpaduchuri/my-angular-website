@@ -43,10 +43,10 @@ export class ContactUsComponent {
   submitForm() {
     if (this.myForm.valid) {
       // Process the form data here (e.g., send it to a server)
-      console.log('Form submitted:', this.myForm.value);
+      //console.log('Form submitted:', this.myForm.value);
       // this.mailerService.sendMail(this.myForm.value.firstName +' '+this.myForm.value.lastName, this.myForm.value.email, this.myForm.value.message)
       //   .then(() => {
-      //     console.log('Email sent successfully');
+      //     //console.log('Email sent successfully');
       //     // Optionally, reset the form or show a success message
       //     this.myForm.reset();
       //   })

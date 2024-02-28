@@ -40,7 +40,7 @@ export class HeroComponent {
     this.photoService.getS3Files().then(() => {
       this.loaded = true;
       this.images = this.photoService.getImagesByType('hero');
-      console.log(this.images);
+      //console.log(this.images);
     });
   }
 }

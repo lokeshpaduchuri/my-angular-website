@@ -40,7 +40,7 @@ export class AboutComponent {
         },
         {
           icon: 'assets/icons/linkedin.svg',
-          url: 'https://www.linkedin.com'
+          url: 'https://www.linkedin.com/in/lokeshpaduchuri'
         },
         {
           icon: 'assets/icons/github.svg',

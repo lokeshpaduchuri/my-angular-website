@@ -6,9 +6,7 @@
     align-items: center;
     width: auto;
     justify-content: space-between;
-    // background-color: rgba($color: $color-lavender, $alpha: 0.6);
     padding: 20px;
-    // border-bottom: 1px solid rgba($color: $color-lavender, $alpha: 0.9);
 }
 
 .header-name {
@@ -40,7 +38,18 @@
 }
 
 @media screen and (max-width: 650px) {
+    .header-component {
+        display: flex;
+        flex-direction: column;
+    }
+
     .header-links {
-        display: none;
+        width: 100vw;
+        justify-content: center;
+
+        div {
+            font-size: 8px;
+            margin-top: 20px;
+        }
     }
 }
